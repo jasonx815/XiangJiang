@@ -2,6 +2,9 @@
 
 namespace XiangJiang.Common
 {
+    /// <summary>
+    /// Array 辅助类
+    /// </summary>
     public static class ArrayHelper
     {
         /// <summary>
