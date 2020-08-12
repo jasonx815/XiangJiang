@@ -29,8 +29,9 @@ namespace XiangJiang.Core
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
         public static Validation Check(this Validation validation, Func<bool> checkFactory, string pattern,
-            string argumentName)
+            string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check<ArgumentException>(validation, checkFactory,
                 string.Format(Resource.ParameterCheck_Match2, argumentName));
         }
@@ -55,7 +56,7 @@ namespace XiangJiang.Core
                     IsValid = true
                 };
 
-            var exception = (TException) Activator.CreateInstance(typeof(TException), message);
+            var exception = (TException)Activator.CreateInstance(typeof(TException), message);
             throw exception;
         }
 
@@ -171,8 +172,9 @@ namespace XiangJiang.Core
         /// <param name="max">最大值</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation InRange(this Validation validation, int data, int min, int max, string argumentName)
+        public static Validation InRange(this Validation validation, int data, int min, int max, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check<ArgumentOutOfRangeException>(validation, () => data >= min && data <= max,
                 string.Format(Resource.ParameterCheck_Between, argumentName, min, max));
         }
@@ -184,8 +186,9 @@ namespace XiangJiang.Core
         /// <param name="data">中文</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation IsChinese(this Validation validation, string data, string argumentName)
+        public static Validation IsChinese(this Validation validation, string data, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check(validation, () => CheckHelper.IsChinese(data), RegexPattern.ChineseCheck, argumentName);
         }
 
@@ -196,8 +199,9 @@ namespace XiangJiang.Core
         /// <param name="email">需要验证的邮箱</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation IsEmail(this Validation validation, string email, string argumentName)
+        public static Validation IsEmail(this Validation validation, string email, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check(validation, () => CheckHelper.IsEmail(email), RegexPattern.EmailCheck, argumentName);
         }
 
@@ -220,8 +224,9 @@ namespace XiangJiang.Core
         /// <param name="data">验证数据</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation IsHexString(this Validation validation, string data, string argumentName)
+        public static Validation IsHexString(this Validation validation, string data, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check(validation, () => CheckHelper.IsHexString(data), RegexPattern.HexStringCheck, argumentName);
         }
 
@@ -232,8 +237,9 @@ namespace XiangJiang.Core
         /// <param name="data">验证数据</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation IsIdCard(this Validation validation, string data, string argumentName)
+        public static Validation IsIdCard(this Validation validation, string data, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check(validation, () => CheckHelper.IsIdCard(data), RegexPattern.IdCardCheck, argumentName);
         }
 
@@ -244,8 +250,9 @@ namespace XiangJiang.Core
         /// <param name="data">需要检测的字符串</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation IsInt(this Validation validation, string data, string argumentName)
+        public static Validation IsInt(this Validation validation, string data, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check(validation, () => CheckHelper.IsInt(data), RegexPattern.IntCheck, argumentName);
         }
 
@@ -256,8 +263,9 @@ namespace XiangJiang.Core
         /// <param name="data">需要检测到IP</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation IsIp(this Validation validation, string data, string argumentName)
+        public static Validation IsIp(this Validation validation, string data, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check(validation, () => CheckHelper.IsIp4Address(data), RegexPattern.IpCheck, argumentName);
         }
 
@@ -268,8 +276,9 @@ namespace XiangJiang.Core
         /// <param name="data">需要检测的字符串</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation IsNumber(this Validation validation, string data, string argumentName)
+        public static Validation IsNumber(this Validation validation, string data, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check(validation, () => CheckHelper.IsNumber(data), RegexPattern.NumberCheck, argumentName);
         }
 
@@ -278,12 +287,13 @@ namespace XiangJiang.Core
         /// </summary>
         /// <param name="validation">Validation</param>
         /// <param name="data">参数值</param>
-        /// <param name="paramName">参数名称</param>
+        /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation IsPort(this Validation validation, string data, string paramName)
+        public static Validation IsPort(this Validation validation, string data, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check<ArgumentException>(validation, () => CheckHelper.IsValidPort(data),
-                string.Format(Resource.ParameterCheck_Port, paramName));
+                string.Format(Resource.ParameterCheck_Port, argumentName));
         }
 
         /// <summary>
@@ -293,8 +303,9 @@ namespace XiangJiang.Core
         /// <param name="data">邮政编码</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation IsPoseCode(this Validation validation, string data, string argumentName)
+        public static Validation IsPoseCode(this Validation validation, string data, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check(validation, () => CheckHelper.IsPoseCode(data), RegexPattern.PostCodeCheck, argumentName);
         }
 
@@ -307,8 +318,9 @@ namespace XiangJiang.Core
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
         public static Validation IsRequireLen(this Validation validation, string input, int requireLength,
-            string argumentName)
+            string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check<ArgumentException>(
                 validation,
                 () => input.Length == requireLength,
@@ -336,8 +348,9 @@ namespace XiangJiang.Core
         /// <param name="data">url</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation IsUrl(this Validation validation, string data, string argumentName)
+        public static Validation IsUrl(this Validation validation, string data, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check(validation, () => CheckHelper.IsUrl(data), RegexPattern.UrlCheck, argumentName);
         }
 
@@ -349,8 +362,9 @@ namespace XiangJiang.Core
         /// <param name="equalObj">比较项</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation NotEqual(this Validation validation, object data, object equalObj, string argumentName)
+        public static Validation NotEqual(this Validation validation, object data, object equalObj, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check<ArgumentException>(validation, () => data != equalObj,
                 string.Format(Resource.ParameterCheck_NotEqual, argumentName, data));
         }
@@ -362,8 +376,9 @@ namespace XiangJiang.Core
         /// <param name="data">输入项</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation NotNull(this Validation validation, object data, string argumentName)
+        public static Validation NotNull(this Validation validation, object data, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check<ArgumentNullException>(validation, () => CheckHelper.NotNull(data),
                 string.Format(Resource.ParameterCheck_NotNull, argumentName));
         }
@@ -375,8 +390,9 @@ namespace XiangJiang.Core
         /// <param name="input">输入项</param>
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
-        public static Validation NotNullOrEmpty(this Validation validation, string input, string argumentName)
+        public static Validation NotNullOrEmpty(this Validation validation, string input, string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check<ArgumentNullException>(validation, () => !string.IsNullOrEmpty(input),
                 string.Format(Resource.ParameterCheck_NotNullOrEmpty_String, argumentName));
         }
@@ -390,8 +406,9 @@ namespace XiangJiang.Core
         /// <param name="argumentName">参数名称</param>
         /// <returns>Validation</returns>
         public static Validation RegexMatch(this Validation validation, string input, string pattern,
-            string argumentName)
+            string argumentName = null)
         {
+            argumentName ??= nameof(argumentName);
             return Check<ArgumentException>(validation, () => Regex.IsMatch(input, pattern),
                 string.Format(Resource.ParameterCheck_Match, input, argumentName));
         }
