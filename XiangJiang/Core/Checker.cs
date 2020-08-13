@@ -396,6 +396,18 @@ namespace XiangJiang.Core
                 string.Format(Resource.ParameterCheck_Match, input, argumentName));
         }
 
+        /// <summary>
+        ///  验证是否是枚举类型
+        /// </summary>
+        /// <param name="validation">Validation</param>
+        /// <param name="type">输入项</param>
+        /// <returns>Validation</returns>
+        public static Validation IsEnum(this Validation validation, Type type)
+        {
+            return Check<ArgumentException>(validation, () => type.IsEnum,
+                string.Format(Resource.ParameterCheck_IsEnum, nameof(type)));
+        }
+
         #endregion Methods
     }
 }
