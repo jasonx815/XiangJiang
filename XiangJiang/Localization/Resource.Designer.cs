@@ -61,42 +61,6 @@ namespace XiangJiang.Localization {
         }
         
         /// <summary>
-        ///   查找类似 查询条件组中的操作类型错误，只能为And或者Or。 的本地化字符串。
-        /// </summary>
-        internal static string Filter_GroupOperateError {
-            get {
-                return ResourceManager.GetString("Filter_GroupOperateError", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 指定的属性“{0}”在类型“{1}”中不存在。 的本地化字符串。
-        /// </summary>
-        internal static string Filter_RuleFieldInTypeNotFound {
-            get {
-                return ResourceManager.GetString("Filter_RuleFieldInTypeNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 创建名称为“{0}”的日志实例时“{1}”返回空实例。 的本地化字符串。
-        /// </summary>
-        internal static string Logging_CreateLogInstanceReturnNull {
-            get {
-                return ResourceManager.GetString("Logging_CreateLogInstanceReturnNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 当前Http上下文中不存在Request有效范围的Mef部件容器。 的本地化字符串。
-        /// </summary>
-        internal static string Mef_HttpContextItems_NotFoundRequestContainer {
-            get {
-                return ResourceManager.GetString("Mef_HttpContextItems_NotFoundRequestContainer", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   查找类似 指定对象中不存在名称为“{0}”的属性。 的本地化字符串。
         /// </summary>
         internal static string ObjectExtensions_PropertyNameNotExistsInType {
@@ -286,6 +250,15 @@ namespace XiangJiang.Localization {
         }
         
         /// <summary>
+        ///   查找类似 参数类型&quot;{0}&quot;不能序列化。 的本地化字符串。
+        /// </summary>
+        internal static string ParameterCheck_Serialize {
+            get {
+                return ResourceManager.GetString("ParameterCheck_Serialize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 参数“{0}”长度需为&quot;{1}&quot;个长度。 的本地化字符串。
         /// </summary>
         internal static string ParameterCheck_StringLength {
@@ -300,24 +273,6 @@ namespace XiangJiang.Localization {
         internal static string ParameterCheck_Url {
             get {
                 return ResourceManager.GetString("ParameterCheck_Url", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 参数key的长度必须为8或24，当前为{0}。 的本地化字符串。
-        /// </summary>
-        internal static string Security_DES_KeyLenght {
-            get {
-                return ResourceManager.GetString("Security_DES_KeyLenght", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   查找类似 参数hashType必须为MD5或SHA1 的本地化字符串。
-        /// </summary>
-        internal static string Security_RSA_Sign_HashType {
-            get {
-                return ResourceManager.GetString("Security_RSA_Sign_HashType", resourceCulture);
             }
         }
     }

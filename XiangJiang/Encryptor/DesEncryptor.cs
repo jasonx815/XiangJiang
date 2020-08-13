@@ -130,19 +130,24 @@ namespace XiangJiang.Encryptor
         public string DecryptString(string text)
         {
             var decryptedData = Convert.FromBase64String(text);
-            using var ms = new MemoryStream();
-            try
+            using (var ms = new MemoryStream())
             {
-                var cryptoStream = new CryptoStream(ms, _desProvider.CreateDecryptor(), CryptoStreamMode.Write);
-                cryptoStream.Write(decryptedData, 0, decryptedData.Length);
-                cryptoStream.FlushFinalBlock();
-            }
-            catch
-            {
-                return "N/A";
-            }
+                try
+                {
+                    using (var cryptoStream =
+                        new CryptoStream(ms, _desProvider.CreateDecryptor(), CryptoStreamMode.Write))
+                    {
+                        cryptoStream.Write(decryptedData, 0, decryptedData.Length);
+                        cryptoStream.FlushFinalBlock();
+                    }
+                }
+                catch
+                {
+                    return "N/A";
+                }
 
-            return Encoding.UTF8.GetString(ms.ToArray());
+                return Encoding.UTF8.GetString(ms.ToArray());
+            }
         }
 
         /// <summary>
