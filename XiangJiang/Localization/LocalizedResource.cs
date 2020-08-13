@@ -21,7 +21,7 @@ namespace XiangJiang.Localization
         /// <param name="resourceName">Name of the resource.</param>
         public LocalizedResource(string resourceName) : this(resourceName, Assembly.GetExecutingAssembly())
         {
-            Checker.Begin().NotNullOrEmpty(resourceName);
+            Checker.Begin().NotNullOrEmpty(resourceName, nameof(resourceName));
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace XiangJiang.Localization
         /// <returns>本地化文本</returns>
         public virtual string GetString(string key)
         {
-            Checker.Begin().NotNullOrEmpty(key);
+            Checker.Begin().NotNullOrEmpty(key, nameof(key));
             var result = Resource.GetString(key, CultureInfo.DefaultThreadCurrentCulture);
             return string.IsNullOrEmpty(result) ? key : result;
         }

@@ -25,20 +25,22 @@ namespace XiangJiang.Encryptor
         {
             var md5Array = rmd5.ToByteArray();
             byte randomKey = md5Array[0];
-            using var md5Provider = new MD5CryptoServiceProvider();
-            data += randomKey;
-            var bytes = Encoding.UTF8.GetBytes(data);
-            var hash = md5Provider.ComputeHash(bytes);
-
-            for (var i = 1; i < 16; i++)
+            using (var md5Provider = new MD5CryptoServiceProvider())
             {
-                if (hash[i] != md5Array[i])
-                {
-                    return false;
-                }
-            }
+                data += randomKey;
+                var bytes = Encoding.UTF8.GetBytes(data);
+                var hash = md5Provider.ComputeHash(bytes);
 
-            return true;
+                for (var i = 1; i < 16; i++)
+                {
+                    if (hash[i] != md5Array[i])
+                    {
+                        return false;
+                    }
+                }
+
+                return true;
+            }
         }
 
         /// <summary>
@@ -50,14 +52,16 @@ namespace XiangJiang.Encryptor
         /// 备注：
         public static Guid ToRandomMd5(this string data)
         {
-            using var md5Provider = new MD5CryptoServiceProvider();
-            //生成256以内的随机数
-            var randomKey = (byte)Math.Abs(new object().GetHashCode() % 256);
-            data += randomKey;
-            var array = Encoding.UTF8.GetBytes(data);
-            var hash = md5Provider.ComputeHash(array);
-            hash[0] = randomKey;
-            return new Guid(hash);
+            using (var md5Provider = new MD5CryptoServiceProvider())
+            {
+                //生成256以内的随机数
+                var randomKey = (byte)Math.Abs(new object().GetHashCode() % 256);
+                data += randomKey;
+                var array = Encoding.UTF8.GetBytes(data);
+                var hash = md5Provider.ComputeHash(array);
+                hash[0] = randomKey;
+                return new Guid(hash);
+            }
         }
 
         /// <summary>

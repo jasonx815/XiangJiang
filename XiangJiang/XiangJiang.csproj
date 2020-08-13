@@ -1,17 +1,25 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>1.0.2</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>YanZhiwei</Authors>
+    <Company>YanZhiwei</Company>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <NeutralLanguage />
+    <PackageProjectUrl>https://github.com/YanZhiwei/XiangJiang</PackageProjectUrl>
+    <Copyright>Copyright YanZhiwei 2020</Copyright>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageIcon>nugetico.png</PackageIcon>
+    <RepositoryUrl>https://github.com/YanZhiwei/XiangJiang</RepositoryUrl>
+    <Description>Based on. Net standard2.0 development tool class library, using the document: https://github.com/YanZhiwei/XiangJiang/wiki; Welcome to pull request or star.</Description>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile></DocumentationFile>
   </PropertyGroup>
-
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile></DocumentationFile>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Update="Localization\Resource.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -19,18 +27,19 @@
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
   </ItemGroup>
-
   <ItemGroup>
     <EmbeddedResource Update="Localization\Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-
   <ItemGroup>
     <None Update="XiangJiang.nupkg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="..\.assets\nugetico.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
-
 </Project>

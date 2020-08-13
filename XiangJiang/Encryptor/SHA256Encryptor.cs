@@ -23,8 +23,8 @@ namespace XiangJiang.Encryptor
         /// 备注：
         public static string Encrypt(string secretKey, string encryptString)
         {
-            Checker.Begin().NotNullOrEmpty(secretKey)
-                           .NotNullOrEmpty(encryptString);
+            Checker.Begin().NotNullOrEmpty(secretKey, nameof(secretKey))
+                .NotNullOrEmpty(encryptString, nameof(encryptString));
             var keyData = Encoding.UTF8.GetBytes(secretKey);
             var plainData = Encoding.UTF8.GetBytes(encryptString);
             using (var sha256 = new HMACSHA256(keyData))

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-	<!-- 
+  <!-- 
 		Microsoft ResX Schema
 
 		Version 1.3
@@ -58,44 +58,115 @@
 			: using a System.ComponentModel.TypeConverter
 			: and then encoded with base64 encoding.
 	-->
-	
-	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-		<xsd:element name="root" msdata:IsDataSet="true">
-			<xsd:complexType>
-				<xsd:choice maxOccurs="unbounded">
-					<xsd:element name="data">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
-							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
-							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
-						</xsd:complexType>
-					</xsd:element>
-					<xsd:element name="resheader">
-						<xsd:complexType>
-							<xsd:sequence>
-								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
-							</xsd:sequence>
-							<xsd:attribute name="name" type="xsd:string" use="required" />
-						</xsd:complexType>
-					</xsd:element>
-				</xsd:choice>
-			</xsd:complexType>
-		</xsd:element>
-	</xsd:schema>
-	<resheader name="resmimetype">
-		<value>text/microsoft-resx</value>
-	</resheader>
-	<resheader name="version">
-		<value>1.3</value>
-	</resheader>
-	<resheader name="reader">
-		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
-	<resheader name="writer">
-		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-	</resheader>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ParameterCheck_Serialize" xml:space="preserve">
+    <value>The parameter type "{0}" cannot be serialized.</value>
+  </data>
+  <data name="ObjectExtensions_PropertyNameNotExistsInType" xml:space="preserve">
+    <value>Specifies that an attribute with the name "{0}" does not exist in the object.</value>
+  </data>
+  <data name="ObjectExtensions_PropertyNameNotFixedType" xml:space="preserve">
+    <value>Specifies that the name "{0}" is not of the type "{1}".</value>
+  </data>
+  <data name="ParameterCheck_Between" xml:space="preserve">
+    <value>The parameter "{0}" must be between "{1}" and "{2}".</value>
+  </data>
+  <data name="ParameterCheck_BetweenNotEqual" xml:space="preserve">
+    <value>The parameter "{0}" must be between "{1}" and "{2}", and cannot be equal to "{3}".</value>
+  </data>
+  <data name="ParameterCheck_DirectoryNotExists" xml:space="preserve">
+    <value>The specified directory path "{0}" does not exist.</value>
+  </data>
+  <data name="ParameterCheck_FileExtCompare" xml:space="preserve">
+    <value>The file type is illegal and must be a file with the "{0}" suffix.</value>
+  </data>
+  <data name="ParameterCheck_FileNotExists" xml:space="preserve">
+    <value>The specified file path "{0}" does not exist.</value>
+  </data>
+  <data name="ParameterCheck_Ip4Address" xml:space="preserve">
+    <value>The value of the parameter "{0}" is not a valid IP4 address.</value>
+  </data>
+  <data name="ParameterCheck_IsFilePath" xml:space="preserve">
+    <value>The specified file path "{0}" is illegal.</value>
+  </data>
+  <data name="ParameterCheck_Match" xml:space="preserve">
+    <value>The parameter "{0}" cannot match the format of "{1}".</value>
+  </data>
+  <data name="ParameterCheck_Match2" xml:space="preserve">
+    <value>The parameter "{0}" is not valid.</value>
+  </data>
+  <data name="ParameterCheck_NotEmpty_Guid" xml:space="preserve">
+    <value>The parameter "{0}" cannot be Guid.</value>
+  </data>
+  <data name="ParameterCheck_NotEqual" xml:space="preserve">
+    <value>The parameter "{0}" cannot be equal to "{1}".</value>
+  </data>
+  <data name="ParameterCheck_NotGreaterThan" xml:space="preserve">
+    <value>The parameter "{0}" must be greater than "{1}".</value>
+  </data>
+  <data name="ParameterCheck_NotGreaterThanOrEqual" xml:space="preserve">
+    <value>The parameter "{0}" must be greater than or equal to "{1}".</value>
+  </data>
+  <data name="ParameterCheck_NotLessThan" xml:space="preserve">
+    <value>The parameter "{0}" must be less than "{1}".</value>
+  </data>
+  <data name="ParameterCheck_NotLessThanOrEqual" xml:space="preserve">
+    <value>The parameter "{0}" must be less than or equal to "{1}".</value>
+  </data>
+  <data name="ParameterCheck_NotNull" xml:space="preserve">
+    <value>The parameter "{0}" cannot be a null reference.</value>
+  </data>
+  <data name="ParameterCheck_NotNullOrEmpty_Collection" xml:space="preserve">
+    <value>The parameter "{0}" cannot be an empty reference or empty set.</value>
+  </data>
+  <data name="ParameterCheck_NotNullOrEmpty_String" xml:space="preserve">
+    <value>The parameter "{0}" cannot be an empty reference or an empty string.</value>
+  </data>
+  <data name="ParameterCheck_Port" xml:space="preserve">
+    <value>The value of the parameter "{0}" is not a valid port.</value>
+  </data>
+  <data name="ParameterCheck_StringLength" xml:space="preserve">
+    <value>The parameter "{0}" should be "{1}" length.</value>
+  </data>
+  <data name="ParameterCheck_Url" xml:space="preserve">
+    <value>The value of the parameter "{0}" is not a valid URL.</value>
+  </data>
 </root>

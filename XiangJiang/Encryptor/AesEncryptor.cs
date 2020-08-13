@@ -88,20 +88,24 @@ namespace XiangJiang.Encryptor
         {
             var decryptedData = Convert.FromBase64String(text);
 
-            using MemoryStream stream = new MemoryStream();
-            try
+            using (MemoryStream stream = new MemoryStream())
             {
-                using CryptoStream cryptoStream = new CryptoStream(stream, _aesProvider.CreateDecryptor(), CryptoStreamMode.Write);
-                cryptoStream.Write(decryptedData, 0, decryptedData.Length);
+                try
+                {
+                    using (CryptoStream cryptoStream =
+                        new CryptoStream(stream, _aesProvider.CreateDecryptor(), CryptoStreamMode.Write))
+                    {
+                        cryptoStream.Write(decryptedData, 0, decryptedData.Length);
+                        cryptoStream.FlushFinalBlock();
+                    }
+                }
+                catch
+                {
+                    return "N/A";
+                }
 
-                cryptoStream.FlushFinalBlock();
+                return Encoding.UTF8.GetString(stream.ToArray());
             }
-            catch
-            {
-                return "N/A";
-            }
-
-            return Encoding.UTF8.GetString(stream.ToArray());
         }
 
         /// <summary>
@@ -113,11 +117,15 @@ namespace XiangJiang.Encryptor
         {
             var encryptedData = Encoding.UTF8.GetBytes(text);
 
-            using var stream = new MemoryStream();
-            using var cryptoStream = new CryptoStream(stream, _aesProvider.CreateEncryptor(), CryptoStreamMode.Write);
-            cryptoStream.Write(encryptedData, 0, encryptedData.Length);
-            cryptoStream.FlushFinalBlock();
-            return Convert.ToBase64String(stream.ToArray());
+            using (var stream = new MemoryStream())
+            {
+                using (var cryptoStream = new CryptoStream(stream, _aesProvider.CreateEncryptor(), CryptoStreamMode.Write))
+                {
+                    cryptoStream.Write(encryptedData, 0, encryptedData.Length);
+                    cryptoStream.FlushFinalBlock();
+                    return Convert.ToBase64String(stream.ToArray());
+                }
+            }
         }
 
         #endregion Methods
