@@ -189,4 +189,7 @@
   <data name="ParameterCheck_Serialize" xml:space="preserve">
     <value>参数类型"{0}"不能序列化。</value>
   </data>
+  <data name="ParameterCheck_IsEnum" xml:space="preserve">
+    <value>参数"{0}"不是枚举类型。</value>
+  </data>
 </root>

@@ -133,6 +133,15 @@ namespace XiangJiang.Localization {
         }
         
         /// <summary>
+        ///   查找类似 参数&quot;{0}&quot;不是枚举类型。 的本地化字符串。
+        /// </summary>
+        internal static string ParameterCheck_IsEnum {
+            get {
+                return ResourceManager.GetString("ParameterCheck_IsEnum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 指定的文件路径“{0}”非法。 的本地化字符串。
         /// </summary>
         internal static string ParameterCheck_IsFilePath {

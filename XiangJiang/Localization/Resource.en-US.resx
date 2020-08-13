@@ -169,4 +169,7 @@
   <data name="ParameterCheck_Url" xml:space="preserve">
     <value>The value of the parameter "{0}" is not a valid URL.</value>
   </data>
+  <data name="ParameterCheck_IsEnum" xml:space="preserve">
+    <value>The parameter "{0}" is not an enum type.</value>
+  </data>
 </root>
