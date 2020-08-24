@@ -21,7 +21,7 @@ namespace XiangJiang.Localization
         /// <param name="resourceName">Name of the resource.</param>
         public LocalizedResource(string resourceName) : this(resourceName, Assembly.GetExecutingAssembly())
         {
-            Checker.Begin().NotNullOrEmpty(resourceName, nameof(resourceName));
+           
         }
 
         /// <summary>
@@ -31,6 +31,7 @@ namespace XiangJiang.Localization
         /// <param name="resourceAssembly">The resource assembly.</param>
         public LocalizedResource(string resourceName, Assembly resourceAssembly)
         {
+            Checker.Begin().NotNullOrEmpty(resourceName, nameof(resourceName));
             Resource = new ResourceManager(resourceName, resourceAssembly);
         }
 
