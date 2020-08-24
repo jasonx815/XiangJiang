@@ -22,7 +22,7 @@ namespace XiangJiang.Localization {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resource {
+    public class Resource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace XiangJiang.Localization {
         ///   返回此类使用的缓存的 ResourceManager 实例。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("XiangJiang.Localization.Resource", typeof(Resource).Assembly);
@@ -51,7 +51,7 @@ namespace XiangJiang.Localization {
         ///   重写当前线程的 CurrentUICulture 属性。
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 指定对象中不存在名称为“{0}”的属性。 的本地化字符串。
         /// </summary>
-        internal static string ObjectExtensions_PropertyNameNotExistsInType {
+        public static string ObjectExtensions_PropertyNameNotExistsInType {
             get {
                 return ResourceManager.GetString("ObjectExtensions_PropertyNameNotExistsInType", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 指定名称“{0}”的属性类型不是“{1}”。 的本地化字符串。
         /// </summary>
-        internal static string ObjectExtensions_PropertyNameNotFixedType {
+        public static string ObjectExtensions_PropertyNameNotFixedType {
             get {
                 return ResourceManager.GetString("ObjectExtensions_PropertyNameNotFixedType", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”的值必须在“{1}”与“{2}”之间。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_Between {
+        public static string ParameterCheck_Between {
             get {
                 return ResourceManager.GetString("ParameterCheck_Between", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”的值必须在“{1}”与“{2}”之间，且不能等于“{3}”。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_BetweenNotEqual {
+        public static string ParameterCheck_BetweenNotEqual {
             get {
                 return ResourceManager.GetString("ParameterCheck_BetweenNotEqual", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 指定的目录路径“{0}”不存在。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_DirectoryNotExists {
+        public static string ParameterCheck_DirectoryNotExists {
             get {
                 return ResourceManager.GetString("ParameterCheck_DirectoryNotExists", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 文件类型不合法，必须为“{0}”后缀文件。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_FileExtCompare {
+        public static string ParameterCheck_FileExtCompare {
             get {
                 return ResourceManager.GetString("ParameterCheck_FileExtCompare", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 指定的文件路径“{0}”不存在。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_FileNotExists {
+        public static string ParameterCheck_FileNotExists {
             get {
                 return ResourceManager.GetString("ParameterCheck_FileNotExists", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”的值不是合法IP4地址。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_Ip4Address {
+        public static string ParameterCheck_Ip4Address {
             get {
                 return ResourceManager.GetString("ParameterCheck_Ip4Address", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数&quot;{0}&quot;不是枚举类型。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_IsEnum {
+        public static string ParameterCheck_IsEnum {
             get {
                 return ResourceManager.GetString("ParameterCheck_IsEnum", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 指定的文件路径“{0}”非法。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_IsFilePath {
+        public static string ParameterCheck_IsFilePath {
             get {
                 return ResourceManager.GetString("ParameterCheck_IsFilePath", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”不能匹配&quot;{1}&quot;格式。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_Match {
+        public static string ParameterCheck_Match {
             get {
                 return ResourceManager.GetString("ParameterCheck_Match", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”格式不合法。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_Match2 {
+        public static string ParameterCheck_Match2 {
             get {
                 return ResourceManager.GetString("ParameterCheck_Match2", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”的值不能为Guid.Empty 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_NotEmpty_Guid {
+        public static string ParameterCheck_NotEmpty_Guid {
             get {
                 return ResourceManager.GetString("ParameterCheck_NotEmpty_Guid", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”不能等于&quot;{1}&quot;。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_NotEqual {
+        public static string ParameterCheck_NotEqual {
             get {
                 return ResourceManager.GetString("ParameterCheck_NotEqual", resourceCulture);
             }
@@ -189,7 +189,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”的值必须大于“{1}”。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_NotGreaterThan {
+        public static string ParameterCheck_NotGreaterThan {
             get {
                 return ResourceManager.GetString("ParameterCheck_NotGreaterThan", resourceCulture);
             }
@@ -198,7 +198,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”的值必须大于或等于“{1}”。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_NotGreaterThanOrEqual {
+        public static string ParameterCheck_NotGreaterThanOrEqual {
             get {
                 return ResourceManager.GetString("ParameterCheck_NotGreaterThanOrEqual", resourceCulture);
             }
@@ -207,7 +207,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”的值必须小于“{1}”。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_NotLessThan {
+        public static string ParameterCheck_NotLessThan {
             get {
                 return ResourceManager.GetString("ParameterCheck_NotLessThan", resourceCulture);
             }
@@ -216,7 +216,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”的值必须小于或等于“{1}”。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_NotLessThanOrEqual {
+        public static string ParameterCheck_NotLessThanOrEqual {
             get {
                 return ResourceManager.GetString("ParameterCheck_NotLessThanOrEqual", resourceCulture);
             }
@@ -225,7 +225,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”不能为空引用。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_NotNull {
+        public static string ParameterCheck_NotNull {
             get {
                 return ResourceManager.GetString("ParameterCheck_NotNull", resourceCulture);
             }
@@ -234,7 +234,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”不能为空引用或空集合。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_NotNullOrEmpty_Collection {
+        public static string ParameterCheck_NotNullOrEmpty_Collection {
             get {
                 return ResourceManager.GetString("ParameterCheck_NotNullOrEmpty_Collection", resourceCulture);
             }
@@ -243,7 +243,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”不能为空引用或空字符串。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_NotNullOrEmpty_String {
+        public static string ParameterCheck_NotNullOrEmpty_String {
             get {
                 return ResourceManager.GetString("ParameterCheck_NotNullOrEmpty_String", resourceCulture);
             }
@@ -252,7 +252,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”的值不是合法端口。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_Port {
+        public static string ParameterCheck_Port {
             get {
                 return ResourceManager.GetString("ParameterCheck_Port", resourceCulture);
             }
@@ -261,7 +261,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数类型&quot;{0}&quot;不能序列化。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_Serialize {
+        public static string ParameterCheck_Serialize {
             get {
                 return ResourceManager.GetString("ParameterCheck_Serialize", resourceCulture);
             }
@@ -270,7 +270,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”长度需为&quot;{1}&quot;个长度。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_StringLength {
+        public static string ParameterCheck_StringLength {
             get {
                 return ResourceManager.GetString("ParameterCheck_StringLength", resourceCulture);
             }
@@ -279,7 +279,7 @@ namespace XiangJiang.Localization {
         /// <summary>
         ///   查找类似 参数“{0}”的值不是合法URL。 的本地化字符串。
         /// </summary>
-        internal static string ParameterCheck_Url {
+        public static string ParameterCheck_Url {
             get {
                 return ResourceManager.GetString("ParameterCheck_Url", resourceCulture);
             }
