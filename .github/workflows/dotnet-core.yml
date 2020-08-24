@@ -21,7 +21,7 @@ jobs:
       - name: Test
         run: dotnet test --no-restore --verbosity normal
       - name: SetNuget
-        run: dotnet nuget add source https://nuget.pkg.github.com/YanZhiwei/index.json -n github -u YanZhiwei -p ${{ secrets.GITHUB_TOKEN }}
+        run: dotnet nuget add source https://nuget.pkg.github.com/YanZhiwei/index.json -n github -u YanZhiwei -p 480986801ad3011ffea06baae32ebeb6845890a3
       - name: NugetPack
         run: dotnet pack --configuration Release
       - name: Push generated package to GitHub registry
