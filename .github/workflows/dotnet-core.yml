@@ -20,9 +20,11 @@ jobs:
         run: dotnet build --configuration Release
       - name: Test
         run: dotnet test --no-restore --verbosity normal
-      - name: SetNuget
-        run: dotnet nuget add source https://nuget.pkg.github.com/YanZhiwei/index.json -n github -u YanZhiwei -p 480986801ad3011ffea06baae32ebeb6845890a3 --store-password-in-clear-text
-      - name: NugetPack
-        run: dotnet pack --configuration Release
+      - name: Install Nuget
+        run: | 
+             $sourceNugetExe = "https://dist.nuget.org/win-x86-commandline/latest/nuget.exe"
+             $targetNugetExe = "nuget.exe"
+             Invoke-WebRequest $sourceNugetExe -OutFile $targetNugetExe
       - name: Push generated package to GitHub registry
-        run: dotnet nuget push .\XiangJiang\bin\Release\*.nupkg --source "github"
+        run: |
+          .\nuget push .\XiangJiang\bin\Release\*.nupkg -Source https://nuget.pkg.github.com/YanZhiwei/index.json -SkipDuplicate -ApiKey ${{ secrets.NugetKey }} -NoSymbols
