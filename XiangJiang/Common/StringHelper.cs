@@ -70,5 +70,10 @@ namespace XiangJiang.Common
         {
             return Guid.NewGuid().ToString().Replace("-", string.Empty);
         }
+
+        public static bool IsEmpty(string data)
+        {
+            return string.IsNullOrEmpty(data) || string.IsNullOrWhiteSpace(data) || data.Length == 0 || data == "" || string.Empty == data;
+        }
     }
 }

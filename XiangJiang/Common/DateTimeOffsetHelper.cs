@@ -13,5 +13,6 @@ namespace XiangJiang.Common
         {
             return dateTimeOffset == null || IsNullOrEmpty(dateTimeOffset.Value);
         }
+
     }
 }
