@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace XiangJiang.Common
+namespace XiangJiang.Core
 {
     /// <summary>
     ///     计数器
