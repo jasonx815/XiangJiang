@@ -22,9 +22,7 @@ namespace XiangJiang.Common
 
         static ReflectHelper()
         {
-            BindingFlags = BindingFlags.DeclaredOnly | BindingFlags.Public |
-                BindingFlags.NonPublic | BindingFlags.Instance |
-                BindingFlags.Static;
+            BindingFlags = BindingFlags.Instance | BindingFlags.Public;
 
         }
 
@@ -81,7 +79,7 @@ namespace XiangJiang.Common
             where T : class
         {
             Checker.Begin().NotNull(model, nameof(model)).NotNullOrEmpty(propertyName, nameof(propertyName));
-            var fieldInfo = model.GetType().GetField(propertyName, BindingFlags);
+            var fieldInfo = model.GetType().GetProperty(propertyName, BindingFlags);
             return (TV)fieldInfo?.GetValue(model);
         }
 
