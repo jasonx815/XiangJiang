@@ -1,5 +1,7 @@
-﻿namespace XiangJiang.Exceptions
+﻿using System;
+namespace XiangJiang.Exceptions
 {
+    [Serializable]
     public sealed class ExceptionMessage
     {
         public readonly string ActualMessage;
@@ -13,6 +15,11 @@
             ActualMessage = actualMessage;
             StackTrace = stackTrace;
             ErrorCode = errorCode;
+        }
+
+        public ExceptionMessage()
+        {
+
         }
 
         public override string ToString()
