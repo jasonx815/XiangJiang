@@ -1,18 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net5.0;netstandard2.0</TargetFrameworks>
-    <Version>2.0.0</Version>
+    <TargetFrameworks>net5.0;net6.0;netstandard2.0</TargetFrameworks>
+    <Version>2.0.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>YanZhiwei</Authors>
     <Company>YanZhiwei</Company>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <NeutralLanguage />
     <PackageProjectUrl>https://github.com/YanZhiwei/XiangJiang</PackageProjectUrl>
-    <Copyright>Copyright YanZhiwei 2020</Copyright>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright YanZhiwei 2022</Copyright>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <PackageIcon>nugetico.png</PackageIcon>
     <RepositoryUrl>https://github.com/YanZhiwei/XiangJiang</RepositoryUrl>
-    <Description>Based on. Net 5 development tool class library, using the document: https://github.com/YanZhiwei/XiangJiang/wiki; Welcome to pull request or star.</Description>
+    <Description>基于.NET 6.0开发辅助类库，文档：https://github.com/YanZhiwei/XiangJiang/wiki; 欢迎PR和Star</Description>
+    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile></DocumentationFile>
