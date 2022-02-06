@@ -1,6 +1,6 @@
 # XiangJiang
 
-[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![nuget](https://img.shields.io/nuget/v/XiangJiang.svg)](https://www.nuget.org/packages/XiangJiang) [![nuget](https://img.shields.io/nuget/dt/XiangJiang.svg)](https://www.nuget.org/packages/XiangJiang.Api)
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE) [![nuget](https://img.shields.io/nuget/v/XiangJiang.svg)](https://www.nuget.org/packages/XiangJiang) [![nuget](https://img.shields.io/nuget/dt/XiangJiang.svg)](https://www.nuget.org/packages/XiangJiang)
 
 > 湘江又称湘水，为长江的主要支流之一，是湖南省境内最大的河流，流域面积达9.46万平方公里，全长948公里，历年平均径流量722亿立方米。
 
