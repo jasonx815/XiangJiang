@@ -6,29 +6,29 @@
 
 基于.NET 6.0，.NET Framework 4.6.1 的 C# 开发辅助类
 
-[Windows](https://github.com/YanZhiwei/XiangJiang.Windows)
-&nbsp;&nbsp;&nbsp;&nbsp;[Windows Api](https://github.com/YanZhiwei/XiangJiang.Windows.Api)
-&nbsp;&nbsp;&nbsp;&nbsp;[Windows Forms](https://github.com/YanZhiwei/XiangJiang.Windows.Form)
-&nbsp;&nbsp;&nbsp;&nbsp;[Windows UI Automation](https://github.com/YanZhiwei/XiangJiang.Windows.UIA)
-&nbsp;&nbsp;&nbsp;&nbsp;[Windows Service](https://github.com/YanZhiwei/XiangJiang.Windows.Service)
-&nbsp;&nbsp;&nbsp;&nbsp;[Workflow](https://github.com/YanZhiwei/XiangJiang.Windows.WF)
-[Logging](https://github.com/YanZhiwei/XiangJiang.Logging.Abstractions)
-&nbsp;&nbsp;&nbsp;&nbsp;[File Logging](https://github.com/YanZhiwei/XiangJiang.Logging.File)
-&nbsp;&nbsp;&nbsp;&nbsp;[Event Logging](https://github.com/YanZhiwei/XiangJiang.Logging.Windows.EventLog)
-[Orm](https://github.com/YanZhiwei/XiangJiang.Orm.Abstractions)
-&nbsp;&nbsp;&nbsp;&nbsp;[Dapper](https://github.com/YanZhiwei/XiangJiang.Infrastructure.Orm.Dapper)
-&nbsp;&nbsp;&nbsp;&nbsp;[EntityFrameworkCore](https://github.com/YanZhiwei/XiangJiang.Orm.EntityFrameworkCore)
-[Configuration](https://github.com/YanZhiwei/XiangJiang.Configuration.Abstractions)
-&nbsp;&nbsp;&nbsp;&nbsp;[File Configuration](https://github.com/YanZhiwei/XiangJiang.Configuration.File)
-[Caching](https://github.com/YanZhiwei/XiangJiang.Caching.Abstractions)
-&nbsp;&nbsp;&nbsp;&nbsp;[Memory Caching](https://github.com/YanZhiwei/XiangJiang.Caching.Memory)
-[Infrastructure](https://github.com/YanZhiwei/XiangJiang.Infrastructure.Abstractions)
-&nbsp;&nbsp;&nbsp;&nbsp;[File Zip](https://github.com/YanZhiwei/XiangJiang.Infrastructure.FileCompress.Zip)
-&nbsp;&nbsp;&nbsp;&nbsp;[ProtoBuf Serializer](https://github.com/YanZhiwei/XiangJiang.Infrastructure.Serializer.ProtoBuf)
-&nbsp;&nbsp;&nbsp;&nbsp;[Xml Serializer](https://github.com/YanZhiwei/XiangJiang.Infrastructure.Serializer.Xml)
-&nbsp;&nbsp;&nbsp;&nbsp;[Json Serializer](https://github.com/YanZhiwei/XiangJiang.Infrastructure.Serializer.Json)
-喜欢这个项目的话就 Star、Fork、Follow
-项目开发模式：日常代码积累+网络搜集
+1. [Windows](https://github.com/YanZhiwei/XiangJiang.Windows)
+   &nbsp;&nbsp;&nbsp;&nbsp;a. [Windows Api](https://github.com/YanZhiwei/XiangJiang.Windows.Api)
+   &nbsp;&nbsp;&nbsp;&nbsp;b. [Windows Forms](https://github.com/YanZhiwei/XiangJiang.Windows.Form)
+   &nbsp;&nbsp;&nbsp;&nbsp;c. [Windows UI Automation](https://github.com/YanZhiwei/XiangJiang.Windows.UIA)
+   &nbsp;&nbsp;&nbsp;&nbsp;d. [Windows Service](https://github.com/YanZhiwei/XiangJiang.Windows.Service)
+   &nbsp;&nbsp;&nbsp;&nbsp;e. [Workflow](https://github.com/YanZhiwei/XiangJiang.Windows.WF)
+2. [Logging](https://github.com/YanZhiwei/XiangJiang.Logging.Abstractions)
+   &nbsp;&nbsp;&nbsp;&nbsp;a. [File Logging](https://github.com/YanZhiwei/XiangJiang.Logging.File)
+   &nbsp;&nbsp;&nbsp;&nbsp;b. [Event Logging](https://github.com/YanZhiwei/XiangJiang.Logging.Windows.EventLog)
+3. [Orm](https://github.com/YanZhiwei/XiangJiang.Orm.Abstractions)
+   &nbsp;&nbsp;&nbsp;&nbsp;a. [Dapper](https://github.com/YanZhiwei/XiangJiang.Infrastructure.Orm.Dapper)
+   &nbsp;&nbsp;&nbsp;&nbsp;b. [EntityFrameworkCore](https://github.com/YanZhiwei/XiangJiang.Orm.EntityFrameworkCore)
+4. [Configuration](https://github.com/YanZhiwei/XiangJiang.Configuration.Abstractions)
+   &nbsp;&nbsp;&nbsp;&nbsp;a. [File Configuration](https://github.com/YanZhiwei/XiangJiang.Configuration.File)
+5. [Caching](https://github.com/YanZhiwei/XiangJiang.Caching.Abstractions)
+   &nbsp;&nbsp;&nbsp;&nbsp;a. [Memory Caching](https://github.com/YanZhiwei/XiangJiang.Caching.Memory)
+6. Infrastructure](https://github.com/YanZhiwei/XiangJiang.Infrastructure.Abstractions)
+   &nbsp;&nbsp;&nbsp;&nbsp;a. [File Zip](https://github.com/YanZhiwei/XiangJiang.Infrastructure.FileCompress.Zip)
+   &nbsp;&nbsp;&nbsp;&nbsp;b. [ProtoBuf Serializer](https://github.com/YanZhiwei/XiangJiang.Infrastructure.Serializer.ProtoBuf)
+   &nbsp;&nbsp;&nbsp;&nbsp;c. [Xml Serializer](https://github.com/YanZhiwei/XiangJiang.Infrastructure.Serializer.Xml)
+   &nbsp;&nbsp;&nbsp;&nbsp;d. [Json Serializer](https://github.com/YanZhiwei/XiangJiang.Infrastructure.Serializer.Json)
+   喜欢这个项目的话就 Star、Fork、Follow
+   项目开发模式：日常代码积累+网络搜集
 
 ## 本项目已得到[JetBrains](https://www.jetbrains.com/shop/eform/opensource)的支持！
 
