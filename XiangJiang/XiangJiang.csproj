@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net5.0;net6.0;netstandard2.0</TargetFrameworks>
-    <Version>2.0.2-dev20220214</Version>
+    <Version>2.0.2-dev20220218</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>YanZhiwei</Authors>
     <Company>YanZhiwei</Company>
@@ -48,5 +48,8 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
   </ItemGroup>
 </Project>
