@@ -1,55 +1,62 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>net5.0;net6.0;netstandard2.0</TargetFrameworks>
-    <Version>2.0.2-dev20220221</Version>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>YanZhiwei</Authors>
-    <Company>YanZhiwei</Company>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <NeutralLanguage />
-    <PackageProjectUrl>https://github.com/YanZhiwei/XiangJiang</PackageProjectUrl>
-    <Copyright>Copyright YanZhiwei 2022</Copyright>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <PackageIcon>nugetico.png</PackageIcon>
-    <RepositoryUrl>https://github.com/YanZhiwei/XiangJiang</RepositoryUrl>
-    <Description>基于.NET 6.0开发辅助类库，文档：https://github.com/YanZhiwei/XiangJiang/wiki; 欢迎PR和Star</Description>
-    <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile></DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile></DocumentationFile>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Update="Localization\Resource.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Update="Localization\Resource.en-US.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Localization\Resource.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Localization\Resource.zh-CN.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Update="XiangJiang.nupkg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="..\.assets\nugetico.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
-  </ItemGroup>
+    <PropertyGroup>
+        <TargetFrameworks>net5.0;net6.0;netstandard2.0</TargetFrameworks>
+        <Version>2.0.2-dev20220228</Version>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>YanZhiwei</Authors>
+        <Company>YanZhiwei</Company>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <NeutralLanguage />
+        <PackageProjectUrl>https://github.com/YanZhiwei/XiangJiang</PackageProjectUrl>
+        <Copyright>Copyright YanZhiwei 2022</Copyright>
+        <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+        <PackageIcon>nugetico.png</PackageIcon>
+        <RepositoryUrl>https://github.com/YanZhiwei/XiangJiang</RepositoryUrl>
+        <Description>基于.NET 6.0开发辅助类库，文档：https://github.com/YanZhiwei/XiangJiang/wiki; 欢迎PR和Star</Description>
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <DocumentationFile></DocumentationFile>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+        <DocumentationFile></DocumentationFile>
+    </PropertyGroup>
+    <ItemGroup>
+        <Compile Update="Localization\Resource.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resource.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Update="Localization\Resource.en-US.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Localization\Resource.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+        <EmbeddedResource Update="Localization\Resource.zh-CN.resx">
+            <Generator>PublicResXFileCodeGenerator</Generator>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <None Update="XiangJiang.nupkg">
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Include="..\.assets\nugetico.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+        </None>
+    </ItemGroup>
+    <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+        <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(TargetFramework)' == 'net6.0'">
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    </ItemGroup>
+    <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
+        <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+    </ItemGroup>
 </Project>
